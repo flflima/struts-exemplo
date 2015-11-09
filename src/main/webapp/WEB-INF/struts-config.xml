@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts-config>
+	<!-- FORWARDS GLOBAL -->
+	<global-forwards>
+		<forward name="index" path="/Index.do" />
+	</global-forwards>
+	
+	<form-beans>
+		<!-- FORM PESSOA -->
+		<form-bean name="PessoaFormBean" type="br.com.struts.formbean.PessoaFormBean" />
+	</form-beans>
+	
+	<action-mappings>
+		<!-- PAGINA INICIAL -->
+		<action path="/Index" include="/formulario.jsp" scope="request" />
+		
+		<action name="PessoaFormBean" type="br.com.struts.formbean.PessoaAction" 
+				path="/PessoaAction" scope="request" >
+			<forward name="sucesso" path="/sucesso.jsp"/>
+			<forward name="falha" path="/falha.jsp"/>		
+		</action>
+				
+	</action-mappings>
+</struts-config>
