@@ -14,7 +14,7 @@
 		<!-- PAGINA INICIAL -->
 		<action path="/Index" include="/formulario.jsp" scope="request" />
 		
-		<action name="PessoaFormBean" type="br.com.struts.formbean.PessoaAction" 
+		<action name="PessoaFormBean" type="br.com.struts.action.PessoaAction" 
 				path="/PessoaAction" scope="request" >
 			<forward name="sucesso" path="/sucesso.jsp"/>
 			<forward name="falha" path="/falha.jsp"/>		

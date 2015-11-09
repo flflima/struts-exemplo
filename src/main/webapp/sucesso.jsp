@@ -11,7 +11,10 @@
 </head>
 <body>
 	<bean:define id="pessoa" name="pessoa" scope="request" />
-		Olá <bean:write name="pessoa" property="nome"/>, SEJA BEM VINDO!!! <br />
+		Olá <bean:write name="pessoa" property="nome"/>
+		<logic:equal value="M" name="pessoa" property="sexo">, SEJA BEM VINDO!!! <br /></logic:equal>
+		<logic:equal value="F" name="pessoa" property="sexo">, SEJA BEM VINDA!!! <br /></logic:equal>
+		
 		Sexo: 
 		<logic:equal value="M" name="pessoa" property="sexo">Masculino</logic:equal>
 		<logic:equal value="F" name="pessoa" property="sexo">Feminino</logic:equal>
